@@ -1,0 +1,22 @@
+keys:
+    - Unseal Key 1: ENC[AES256_GCM,data:xFb6R8E50h1VB9i+YAOgRwDQE5P/rkgJn8W4Tg3CO+grPtOPHc5WaM0vw+U=,iv:SfltQkCTzTjdpBQofN6/nu4J6iYszo3NLKniYy/uf0w=,tag:W+cx24Znizm29RhAH57JsA==,type:str]
+    - Unseal Key 2: ENC[AES256_GCM,data:hlJnEhCgVlkNA5o7ebK4sy3B3xzmhbd9oA45lB5B9cl/96M8L1mujXZBsq0=,iv:nDjVicsllpJkDkXdiV4TKk6XjFkK20LW36B3Ds3h52A=,tag:QrAQWj/77cjl30yB7Kubvw==,type:str]
+    - Unseal Key 3: ENC[AES256_GCM,data:bkvcktZ2kuyrH+OuOZ1H8psqrRvcvfxAqvk/fbOxYYDH4NIpZne6DsJ96uE=,iv:srKXgLCqlUgfubG4qVg6Wa/61jLT2lUCLOMcAtkLmuA=,tag:WejthDM0xZF6ac1bEkEjDQ==,type:str]
+    - Unseal Key 4: ENC[AES256_GCM,data:AaOkUyJHV8X9FWIVMsMTL9lzKQjId3DuEfxH2Ek+/N6YHvq1Ed4r30femTg=,iv:g2jynhMvtdvnLYih1dVwcXG5LhJ7qdHtMgZfbhdLAFE=,tag:PXombaQ7iOL5/MCf9Bp5ZQ==,type:str]
+    - Unseal Key 5: ENC[AES256_GCM,data:Fh32Oaxw0eIJc88tQ2Y46iyE1wVhJRGQLIIyjGCBMHZSEN1PNbcvls8OLJ8=,iv:7fRnK62tT61TWGIHVxFvlTHo2rghn19gdBpQWhAknQE=,tag:Xv2JL1DWdOAsKyBcoYE1wg==,type:str]
+    - Initial Root Token: ENC[AES256_GCM,data:eIp9gDa8FEeTHu3cISQs8hWf6V5rZEyAwPo=,iv:eANKvhJe11hgozThVuwiaimlw7vdV6/Asc1DqyVEFvM=,tag:PdzDyCtC8C4bgTxFoTCCVw==,type:str]
+sops:
+    kms:
+        - arn: arn:aws:kms:ap-southeast-1:194094947249:key/8fcd7286-8c02-402d-929d-bae7ffcde2fa
+          created_at: "2022-01-09T14:17:24Z"
+          enc: AQICAHgK1rXHzkFQEuhcCPuc8ewboBy0Uzf7ETBukqzQPYwZpwEYh8WX/63uI63tIxf3Wk6FAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMJOc77J6gbiKvbXt7AgEQgDsgsBpyhVeVY2iITu/BBSEeKQsjNwili58AcdUNDTcKk4k1dv3rJoz0d8eqSUrp0VmFVHCd7v7o8Nkf6g==
+          aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2022-01-09T14:17:25Z"
+    mac: ENC[AES256_GCM,data:dpGxluzelgsEMojAtecpVITitmmYFZRLBl3KiF7HmlP16+kiF5+09+loxNlZNTH7LNa9gJr282DiV/ID2UIaUWzFyc+iqeXb/bFO1iqr1qFM7Hb8XsDE916z653weym9xggxmQFWGDH7jyo5Do83iJEUebunoBVWQ310A9mjqcM=,iv:J6nV0V5I/7RGjYO7gnf4Z0Dpl7cVXRuFM2gxy8+Du/Q=,tag:IqtJgv0VhxmP8c8/ao99fA==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.7.1
