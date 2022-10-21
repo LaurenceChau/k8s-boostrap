@@ -1,0 +1,14 @@
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::194094947249:role/prod-myinfra-vpc-cni-role
+
+init:
+  image:
+    tag: v1.11.2
+    region: ap-southeast-1
+    account: "602401143452"
+
+image:
+  region: ap-southeast-1
+  tag: v1.11.2
+  account: "602401143452"

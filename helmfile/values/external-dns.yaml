@@ -1,0 +1,9 @@
+domainFilters: ["laurencechau.com"]
+sources: [service, ingress]
+policy: upsert-only
+txtOwnerId: external-dns
+provider: aws
+registry: txt
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::194094947249:role/prod-myinfra-external-dns-role

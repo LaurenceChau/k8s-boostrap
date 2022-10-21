@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: teamcity-agent-1
+  name: teamcity-agent-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: teamcity-agent-1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: teamcity-agent-1
+    spec:
+      containers:
+        - env:
+            - name: DOCKER_IN_DOCKER
+              value: start
+            - name: SERVER_URL
+              value: "http://teamcity:8112"
+          image: jetbrains/teamcity-agent:2022.04.1-linux-sudo
+          name: teamcity-agent-1
+          resources: {}
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - mountPath: /data/teamcity_agent/conf
+              name: teamcity-agent-1-volume0
+      restartPolicy: Always
+      securityContext:
+        fsGroup: 1000
+      volumes:
+        - name: teamcity-agent-1-volume0
+          persistentVolumeClaim:
+            claimName: teamcity-agent-1-claim0
+status: {}

@@ -1,0 +1,1 @@
+{"buildTargets":["apply","aws-lb","kube-router","kube-router-rollback","nginx","rollback","vault"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

@@ -1,0 +1,5 @@
+clusterName: prod-myinfra-eks
+serviceAccount:
+  create: true
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::194094947249:role/prod-myinfra-lb-controler-role

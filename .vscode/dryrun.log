@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/lars/k8s/k8s-boostrap'
+kubectl apply -k manifests/kube-router
+make: Leaving directory '/home/lars/k8s/k8s-boostrap'
+ 

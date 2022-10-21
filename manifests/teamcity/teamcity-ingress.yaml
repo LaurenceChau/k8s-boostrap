@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  name: teamcity-ingress
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: teamcity.laurencechau.com
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: teamcity.laurencechau.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: teamcity
+                port:
+                  number: 8112
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - teamcity.laurencechau.com
+      secretName: teamcity-secret
+status:
+  loadBalancer: {}

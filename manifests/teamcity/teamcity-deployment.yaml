@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: teamcity
+  name: teamcity
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: teamcity
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: teamcity
+    spec:
+      containers:
+        - image: "jetbrains/teamcity-server"
+          name: teamcity
+          ports:
+            - containerPort: 8111
+          resources: {}
+          volumeMounts:
+            - mountPath: /data/teamcity_server/datadir
+              name: teamcity-volume0
+            - mountPath: /opt/teamcity/logs
+              name: teamcity-volume1
+      restartPolicy: Always
+      securityContext:
+        fsGroup: 1000
+      volumes:
+        - name: teamcity-volume0
+          persistentVolumeClaim:
+            claimName: teamcity-claim0
+        - name: teamcity-volume1
+          persistentVolumeClaim:
+            claimName: teamcity-claim1
+status: {}

@@ -1,0 +1,17 @@
+egressMasqueradeInterfaces: eth0
+tunnel: "disabled"
+ipam: 
+  mode: "eni"
+endpointRoutes:
+  enabled: true
+eni:
+  enabled: true 
+tunnel: "disabled"
+nodeinit: 
+  enabled: true
+kubeProxyReplacement: "strict"
+k8sServiceHost: "08167DDBB5933F5FF921BC91C5220E5E.gr7.ap-southeast-1.eks.amazonaws.com"
+k8sServicePort: 443
+# auto-create-cilium-node-resource: "true"
+# egress-masquerade-interfaces: eth+
+# kubeProxyReplacement=strict

@@ -1,0 +1,88 @@
+repositories:
+  - name: eks
+    url: https://aws.github.io/eks-charts
+
+  - name: cilium
+    url: https://helm.cilium.io/
+
+  - name: external-dns
+    url: https://kubernetes-sigs.github.io/external-dns/
+
+  - name: argo
+    url: https://argoproj.github.io/argo-helm
+
+  - name: ingress-nginx
+    url: https://kubernetes.github.io/ingress-nginx
+
+  - name: jetstack
+    url: https://charts.jetstack.io
+
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
+
+  - name: prometheus-community
+    url: https://prometheus-community.github.io/helm-charts
+
+  - name: jupyterhub
+    url: https://jupyterhub.github.io/helm-chart
+
+releases:
+  # - name: cilium
+  #   namespace: kube-system
+  #   chart: cilium/cilium
+  #   values:
+  #     - values/cilium.yaml
+
+  - name: aws-load-balancer-controller
+    namespace: kube-system
+    chart: eks/aws-load-balancer-controller
+    values:
+      - values/aws-lb-controller.yaml
+
+  - name: external-dns
+    namespace: kube-system
+    chart: external-dns/external-dns
+    values:
+      - values/external-dns.yaml
+
+  - name: vpc-cni
+    namespace: kube-system
+    chart: eks/aws-vpc-cni
+    values:
+      - values/aws-vpc-cni.yaml
+
+  - name: ingress-nginx
+    chart: ingress-nginx/ingress-nginx
+    namespace: ingress-nginx
+    values:
+      - values/ingress-nginx.yaml
+
+  - name: cert-manager
+    chart: jetstack/cert-manager
+    namespace: cert-manager
+    values:
+      - values/cert-manager.yaml
+
+  - name: argocd
+    chart: argo/argo-cd
+    namespace: argocd
+    values:
+      - values/argocd.yaml
+
+  - name: grafana
+    chart: grafana/grafana
+    namespace: grafana
+    values:
+      - values/grafana.yaml
+
+  - name: prometheus
+    chart: prometheus-community/prometheus
+    namespace: prometheus
+    values:
+      - values/prometheus.yaml
+
+  - name: jupyterhub
+    chart: jupyterhub/jupyterhub
+    namespace: jupyterhub
+    values:
+      - values/jupyterhub.yaml
