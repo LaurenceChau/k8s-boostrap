@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Oct 21 22:17:39 2022
+# Make data base, printed on Sun Oct 23 15:20:50 2022
 
 # Variables
 
@@ -37,7 +37,7 @@ _ = /mnt/c/Users/laurence/AppData/Local/Programs/Microsoft VS Code/bin/code
 # environment
 do = --dry-run=client -o yaml
 # environment
-STARSHIP_SESSION_KEY = 2450424854504016
+STARSHIP_SESSION_KEY = 1982121023928441
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -53,7 +53,7 @@ MAKEFILE_LIST :=  Makefile
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-6cc0728e-9ef9-4867-b059-1e012955c7e7.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0d25de58-e75f-4d77-9430-332b9456100b.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -69,7 +69,7 @@ GROOVY_HOME = /usr/local/groovy-4.0.0-alpha-3
 # environment
 WSL_INTEROP = /run/WSL/8_interop
 # environment
-WT_SESSION = 5646bac4-b4f8-4b5f-ba4a-ac2be4a61c5b
+WT_SESSION = cb2a5c88-cf07-415c-84c9-99a2ae76c758
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -161,9 +161,9 @@ STARSHIP_SHELL = bash
 
 # Directories
 
-# . (device 2064, inode 143537): 18 files, no impossibilities.
+# . (device 2064, inode 143537): 15 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -249,12 +249,12 @@ nginx:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 326 B / avg = 10 B
-# current buf: size = 8162 B / used = 326 B / count = 30 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 278 B / avg = 10 B
+# current buf: size = 8162 B / used = 278 B / count = 27 / avg = 10 B
 
-# strcache performance: lookups = 42 / hit rate = 28%
+# strcache performance: lookups = 39 / hit rate = 30%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Fri Oct 21 22:17:39 2022
+# Load=27/8192=0%, Rehash=0, Collisions=1/39=3%
+# Finished Make data base on Sun Oct 23 15:20:50 2022
 
  
